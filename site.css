@@ -39,5 +39,10 @@ body{
 }
 
 .grassGround{
-    
+    position: absolute;
+    bottom: 0px;
+    background-color: green;
+    height: 150px;
+    width: 100%;
+
 }
