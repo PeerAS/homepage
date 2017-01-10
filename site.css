@@ -4,18 +4,65 @@ html{
 
 body{
     display: flex;
-    background-color: #4caf50;
+    background-color: rgb(251, 251, 251);
     width: 100%;
+    margin: 0px;
+    flex-direction: column;
+
 }
 
 .emTopContent{
     display: flex;
     width: 100%;
-    height: 200px;
-    background-color: #66BB6A;
-    justify-content: center;   
+    height: 150px;
+    background-color: white;
+    justify-content: space-around;
+    font-size: 120%;   
 }
 
-.emBox{
-    box-shadow: 0 0 20px 0 rgba(163,163,168,.75);
+.emTopContent h2{
+    display: flex;
+    justify-content: space-around;
+}
+
+.emBanner{
+    display: flex;
+    width: 110%;
+    margin: 0px -5%;
+    box-shadow: 0 4px 20px -10px black;
+}
+
+.emMainContent{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    margin-top: 5%;
+    flex-direction: column;
+    justify-content: space-around; 
+    align-items: center;
+}
+
+.emMainContent h1{
+    cursor: pointer;
+}
+
+.emContentBorder{
+    display: flex;
+    height: 2px;
+    width: 100%;
+    background-color: grey;
+
+    z-index: 10;
+}
+
+.emAbout{
+    display:flex;
+    height: 100%;
+    flex-direction: column;
+}
+.hiddenDrawer{
+    display: flex;
+    width: 1vh;
+    height: 200px;
+    background-color: red;
 }
