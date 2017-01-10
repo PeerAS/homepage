@@ -3,11 +3,12 @@
 
     function HelloWorld(params) {
         console.log("Hello");
-        $('#aboutMe').on('click', function()
+        $('.drawerHandle').on('click', function()
         {
-            if($("#aboutMeContent").height() === 0)
+            var sibling = $(this).next();
+            if($(sibling).height() === 0)
             {
-                $("#aboutMeContent").animate({
+                $(sibling).animate({
                     height:"400px",
                     
                 },
@@ -19,7 +20,7 @@
             }
             else
             {
-                $("#aboutMeContent").animate({
+                $(sibling).animate({
                     height:"0px"                   
                 },
                 {
