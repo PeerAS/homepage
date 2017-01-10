@@ -6,6 +6,7 @@
         $('.drawerHandle').on('click', function()
         {
             var sibling = $(this).next();
+            CloseOtherDrawers(sibling);
             if($(sibling).height() === 0)
             {
                 $(sibling).animate({
@@ -33,6 +34,27 @@
            
         });
   
+    }
+
+    function CloseOtherDrawers(selectedElement)
+    {
+        var drawers = $(".hiddenDrawer");
+
+        for(var i = 0; i < drawers.length; i++)
+        {
+            if($(drawers[i]).height() > 0)
+            {
+                 $(drawers[i]).animate({
+                    height:"0px"                   
+                },
+                {
+                     done: function()
+                    {
+                        $(this).css("display", "none");
+                    }
+                }, 600);
+            }
+        }
     }
 
 
