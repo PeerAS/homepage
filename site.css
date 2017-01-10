@@ -27,8 +27,7 @@ body{
 
 .emBanner{
     display: flex;
-    width: 110%;
-    margin: 0px -5%;
+    width: 100%;
     box-shadow: 0 4px 20px -10px black;
 }
 
@@ -40,6 +39,7 @@ body{
     flex-direction: column;
     justify-content: space-around; 
     align-items: center;
+
 }
 
 .emMainContent h1{
@@ -51,8 +51,6 @@ body{
     height: 2px;
     width: 5%;
     background-color: grey;
-
-    z-index: 10;
 }
 
 .emAbout{
@@ -61,11 +59,23 @@ body{
     height: 100%;
     flex-direction: column;
     align-items: center;
+
 }
+
+.hiddenDrawer img{
+    height: 200px;
+}
+
 .hiddenDrawer{
     display: flex;
     width: 100%;
-    height: 200px;
+    height: 0px;
     background-color: rgb(240, 240, 240);
     box-shadow: inset 0 0 10px grey;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.aboutMeDrawer span{
+
 }
