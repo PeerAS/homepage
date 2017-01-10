@@ -63,7 +63,19 @@ body{
 }
 
 .aboutMeDrawer img{
-    height: 200px;
+    height: 300px;
+}
+
+.aboutMeDrawer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.contentCard{
+    display: flex;
+    width: 20%;
 }
 
 .hiddenDrawer{
@@ -73,7 +85,7 @@ body{
     background-color: rgb(240, 240, 240);
     box-shadow: inset 0 0 10px grey;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .drawerTop{
