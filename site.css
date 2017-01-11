@@ -107,6 +107,7 @@ body{
     height: 80%;
     box-shadow: 0 0 10px 5px grey;
     background-color: rgb(251, 251, 251);
+    overflow: hidden;
     cursor: pointer;
 }
 
@@ -124,7 +125,6 @@ body{
 
 .projectText{
     display: flex;
-    overflow-y: hidden;
     height: 90%;
     width: 40%;
 }
