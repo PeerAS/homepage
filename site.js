@@ -2,8 +2,7 @@
 
 
     function HelloWorld(params) {
-        console.log("Hello");
-       
+        console.log("Hello");       
     }
 
     function CloseOtherDrawers(selectedElement)
@@ -33,6 +32,7 @@
         {
             var sibling = $(this).next();
             CloseOtherDrawers(sibling);
+            
             if($(sibling).height() === 0)
             {
                 $(sibling).animate({
@@ -62,6 +62,7 @@
         $('.projectPreviewCard').on('click', function()
         {
             $(this).animate({
+                top: '10%',
                 width: '80%',
                 height: '80%'
             },
@@ -69,18 +70,41 @@
                 start: function()
                 {
                     $(this).css('position', 'absolute');
+                    $(this).attr('selectedProject', true);
                 }
-            }, 600);
+            }, 2000);
         });
 
+        $('body').on('click', function(event)
+        {
+            var projectCards = $('[selectedProject="true"]');
+
+            if( projectCards.length && !$(event.target).is(projectCards))
+            {
+                CloseProjectCard(projectCards);
+            }
+        });
+    }
+
+    function CloseProjectCard(projectCard)
+    {
+        $(projectCard).animate({
+            width: '20%',
+            
+        },
+        {
+            start: function()
+            {
+                $(this).css('position', '');
+                $(this).attr('selectedProject', false);
+            }
+        }, 2000);
     }
 
     function Init()
     {
         SetUpClickHandlers();
-    }
-
-  
+    } 
            
     return Emyra = {
         HelloWorld: HelloWorld,

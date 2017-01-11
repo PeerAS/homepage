@@ -101,9 +101,30 @@ body{
 }
 .projectPreviewCard{
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     width: 20%;
     height: 80%;
     box-shadow: 0 0 10px 5px grey;
     background-color: rgb(251, 251, 251);
     cursor: pointer;
+}
+
+.closeCardIcon{
+    display: flex;
+    width: 10%;
+    height: 10%;
+}
+
+.projectImage{
+    display: flex;
+    height: 50%;
+    width: 10%;
+}
+
+.projectText{
+    display: flex;
+    overflow-y: hidden;
+    height: 90%;
+    width: 40%;
 }
