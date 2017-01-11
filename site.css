@@ -8,16 +8,6 @@ body{
     width: 100%;
     margin: 0px;
     flex-direction: column;
-
-}
-
-.emTopContent{
-    display: flex;
-    width: 100%;
-    height: 150px;
-    background-color: white;
-    justify-content: space-around;
-    font-size: 120%;   
 }
 
 .emTopContent h2{
