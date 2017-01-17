@@ -2,7 +2,7 @@
 
 
     function HelloWorld(params) {
-        console.log("Hello");       
+        console.log("Hello");  
     }
 
     function CloseOtherDrawers(selectedElement)
@@ -69,6 +69,7 @@
             {
                 start: function()
                 {
+                    ToggleProjectContent(this);                    
                     $(this).css('position', 'absolute');
                     $(this).attr('selectedProject', true);
                 }
@@ -79,17 +80,31 @@
         {
             var projectCards = $('[selectedProject="true"]');
 
-            if( projectCards.length && !$(event.target).is(projectCards))
+            if( projectCards.length && !$.contains(projectCards[0], event.target))
             {
                 CloseProjectCard(projectCards);
             }
         });
     }
 
+
+    function HidePreviewImage(card)
+    {
+        
+    }
+
+    function ToggleProjectContent(card)
+    {
+        var image = $(card).find('.previewImage');
+        $(image).toggle();
+        var projectContent = $(card).find('.projectContent');
+        $(projectContent).toggle();
+    }
+
     function CloseProjectCard(projectCard)
     {
         $(projectCard).animate({
-            width: '20%',
+            width: '100%',
             
         },
         {
