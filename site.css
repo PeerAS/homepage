@@ -60,17 +60,6 @@ body{
 
 }
 
-.aboutMeDrawer img{
-    height: 300px;
-}
-
-.aboutMeDrawer{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-}
-
 .contentCard{
     width: 20%;
 }
@@ -92,6 +81,38 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.closeCardIcon{
+    display: flex;
+    width: 10%;
+    height: 10%;
+}
+
+/************/
+/**ABOUT ME**/
+/************/
+.aboutMeDrawer img{
+    height: 300px;
+}
+
+.aboutMeDrawer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.aboutMeText{
+    font-weight: bold;
+}
+
+
+
+/************/
+/************/
+/**PROJECT **/
+/************/
+
 
 .projectDrawer{
     display: flex;
@@ -116,7 +137,6 @@ body{
     height: 80%;
     box-shadow: 0 0 10px 5px grey;
     background-color: rgb(251, 251, 251);
-    overflow: hidden;
     cursor: pointer;
 }
 
@@ -133,18 +153,11 @@ body{
 
 
 
-.aboutMeText{
-    font-weight: bold;
-}
 .projectText{
     font-size: 120%;
     font-weight: bold;
 }
-.closeCardIcon{
-    display: flex;
-    width: 10%;
-    height: 10%;
-}
+
 
 .projectHeader{
     display: flex;
@@ -184,20 +197,6 @@ body{
     align-items: center;
 }
 
-.imageGallery{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.imageChooser{
-    display: flex;
-    height: 30%;
-    flex-direction: row;
-}
-
 .projectInfo{
     display: flex;
     flex-direction: column;
@@ -233,3 +232,22 @@ body{
     font-size: 120%;
     font-weight: bold;
 }
+
+/************/
+/************/
+
+.imageGallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.imageChooser{
+    display: flex;
+    height: 30%;
+    flex-direction: row;
+}
+
+
