@@ -99,7 +99,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .aboutMeText{
@@ -247,7 +247,18 @@ body{
 .imageChooser{
     display: flex;
     height: 30%;
+    max-width: 100%;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.imageChooser img{
+    max-height: 60%;
+    max-width: 40%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 
