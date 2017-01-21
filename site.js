@@ -61,19 +61,26 @@
 
         $('.projectPreviewCard').on('click', function()
         {
-            $(this).animate({
+            var selected = $(this).attr('selectedProject');
+
+            if(selected !== "true")
+            {
+                 $(this).animate({
                 top: '10%',
                 width: '80%',
                 height: '80%'
-            },
-            {
-                start: function()
+                },
                 {
-                    ToggleProjectContent(this);                    
-                    $(this).css('position', 'absolute');
-                    $(this).attr('selectedProject', true);
-                }
-            }, 2000);
+                    start: function()
+                    {
+                        ToggleProjectContent(this);                    
+                        $(this).css('position', 'absolute');
+                        $(this).css('left', '10%');
+                        $(this).attr('selectedProject', true);
+                    }
+                }, 2000);
+            }
+           
         });
 
         $('body').on('click', function(event)
@@ -87,11 +94,6 @@
         });
     }
 
-
-    function HidePreviewImage(card)
-    {
-        
-    }
 
     function ToggleProjectContent(card)
     {
@@ -112,6 +114,7 @@
             {
                 $(this).css('position', '');
                 $(this).attr('selectedProject', false);
+                ToggleProjectContent(this);
             }
         }, 2000);
     }
