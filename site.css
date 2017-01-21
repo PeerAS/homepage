@@ -158,7 +158,7 @@ body{
 
 .projectImage{
     display: flex;
-    height: 90%;
+    height: 50%;
     width: 50%;
 }
 
@@ -166,16 +166,12 @@ body{
     max-width: 100%;
 }
 
-.projectText{
-    display: flex;
-    height: 90%;
-    width: 40%;
-}
+
 
 .projectContent{
     display: flex;
     width: 95%;
-    height: 100%;
+    height: 95%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -184,11 +180,52 @@ body{
 .projectSection{
     display: flex;
     width: 95%;
-    height: 80%;
+    height: 100%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+
+.imageGallery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.projectInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.projectText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    width: 100%;
+}
+
+.projectLinks{
+    display: flex;
+    flex-direction: row;
+    max-height: 20%;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.projectLinks img{
+    max-height: 5%;
+    max-width: 5%;
+}
+
 .projectTitle{
     font-size: 120%;
     font-weight: bold;
