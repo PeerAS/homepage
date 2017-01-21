@@ -127,7 +127,7 @@
 
         $(images).on('mouseover', function(event)
         {
-            var displayedImage = $(".projectImage img");
+            var displayedImage = $(event.target).parent().parent().find('.projectImage img');
 
             var hoverSrc = $(event.target).attr('src');
 
