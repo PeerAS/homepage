@@ -77,6 +77,7 @@
                         $(this).css('position', 'absolute');
                         $(this).css('left', '10%');
                         $(this).attr('selectedProject', true);
+                        $(this).addClass('selectedCard');
                     }
                 }, 2000);
             }
@@ -114,14 +115,36 @@
             {
                 $(this).css('position', '');
                 $(this).attr('selectedProject', false);
+                $(this).removeClass('selectedCard');
                 ToggleProjectContent(this);
             }
         }, 2000);
     }
 
+    function ChangeDisplayedImage()
+    {
+        var images = $('.imageChooser img');
+
+        $(images).on('mouseover', function(event)
+        {
+            var displayedImage = $(".projectImage img");
+
+            var hoverSrc = $(event.target).attr('src');
+
+            $(displayedImage).attr('src', hoverSrc);
+
+        });
+    }
+
+    function SetUpHoverHandlers()
+    {
+        ChangeDisplayedImage();
+    }
+
     function Init()
     {
         SetUpClickHandlers();
+        SetUpHoverHandlers();
     } 
            
     return Emyra = {
