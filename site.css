@@ -192,6 +192,7 @@ body{
     align-items: center;
 }
 
+
 .projectSection{
     display: flex;
     width: 95%;
@@ -200,6 +201,10 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+
+
+
+
 
 .projectInfo{
     display: flex;
@@ -226,6 +231,8 @@ body{
     justify-content: flex-end;
     align-items: center;
 }
+
+
 
 .projectLinks img{
     max-height: 5%;
