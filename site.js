@@ -61,27 +61,7 @@
 
         $('.projectPreviewCard').on('click', function()
         {
-            var selected = $(this).attr('selectedProject');
-
-            if(selected !== "true")
-            {
-                 $(this).animate({
-                top: '10%',
-                width: '80%',
-                height: '80%'
-                },
-                {
-                    start: function()
-                    {
-                        ToggleProjectContent(this);                    
-                        $(this).css('position', 'absolute');
-                        $(this).css('left', '10%');
-                        $(this).attr('selectedProject', true);
-                        $(this).addClass('selectedCard');
-                    }
-                }, 2000);
-            }
-           
+            ProjectAnimation.StartProjectAnimation(this);           
         });
 
         $('body').on('click', function(event)
@@ -94,7 +74,6 @@
             }
         });
     }
-
 
     function ToggleProjectContent(card)
     {
