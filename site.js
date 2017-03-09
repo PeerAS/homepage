@@ -11,7 +11,7 @@
 
         for(var i = 0; i < drawers.length; i++)
         {
-            if($(drawers[i]).height() > 0)
+            if($(drawers[i]).height() > 0 && !$(drawers[i]).is(selectedElement))
             {
                  $(drawers[i]).animate({
                     height:"0px"                   
@@ -31,6 +31,7 @@
          $('.drawerHandle').on('click', function()
         {
             var sibling = $(this).next();
+
             CloseOtherDrawers(sibling);
             
             if($(sibling).height() === 0)
@@ -41,7 +42,11 @@
                 },
                 {  start: function()
                     {
+
                         $(this).css("display", "flex");
+                        $(".emMainContent").animate({
+                            marginTop: '0%'
+                        }, 400);
                     }
                 }, 600);
             }
@@ -51,9 +56,16 @@
                     height:"0px"                   
                 },
                 {
-                     done: function()
+                    start: function()
+                    {
+                         $(".emMainContent").animate({
+                            marginTop: '5%'
+                        }, 400);
+                    },
+                    done: function()
                     {
                         $(this).css("display", "none");
+                       
                     }
                 }, 600);
             }           

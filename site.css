@@ -8,7 +8,7 @@ body{
     width: 100%;
     margin: 0px;
     flex-direction: column;
-    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .boldText{
@@ -43,6 +43,7 @@ body{
     margin-top: 5%;
     flex-direction: column;
     align-items: center;
+    overflow-y: hidden;
 }
 
 .emMainContent h1{
